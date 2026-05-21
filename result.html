@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Fitness Result</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1 class="title">Your Fitness Plan</h1>
+
+        <!-- 🔥 TOP CARD -->
+        <div class="card highlight center">
+            <h2>Maintenance Calories</h2>
+            <h1 id="calories" class="big-cal"></h1>
+        </div>
+
+        <!-- 💪 MACROS -->
+        <div class="card">
+            <h3 class="section-title">Macros</h3>
+
+            <div class="macro-grid">
+                <div class="macro">
+                    <span>💪</span>
+                    <h3 id="protein"></h3>
+                    <p>Protein</p>
+                </div>
+
+                <div class="macro">
+                    <span>🥑</span>
+                    <h3 id="fat"></h3>
+                    <p>Fat</p>
+                </div>
+
+                <div class="macro">
+                    <span>🍚</span>
+                    <h3 id="carbs"></h3>
+                    <p>Carbs</p>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- 🍽️ SUGGESTED MEAL PLAN -->
+        <div class="card" id="mealPlanCard" style="margin-top: 20px;">
+            <h3 class="section-title">🍽️ Suggested Meal Plan</h3>
+            <p class="subtitle" style="text-align: left; margin-bottom: 20px; font-size: 0.95rem;">
+                Here is your customized nutrition plan, including tailored preparation steps and individual macronutrient targets for every meal.
+            </p>
+            <div id="mealSuggestionsContainer" class="meals-list">
+                <!-- Dynamically populated by script.js -->
+            </div>
+        </div>
+
+        <!-- 🔘 BUTTONS -->
+        <div class="btn-group">
+            <button onclick="goBack()">Back</button>
+            <button onclick="logout()" class="logout">Logout</button>
+        </div>
+
+
+    </div>
+    
+    <div class="bottom-nav">
+        <button onclick="goPage('result.html')">🏠<br>Home</button>
+        <button onclick="goPage('diet.html')">🍽<br>Diet</button>
+        <button onclick="goPage('trackers.html')">📊<br>Track</button>
+        <button onclick="goPage('progress.html')">📈<br>Progress</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
